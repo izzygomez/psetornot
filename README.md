@@ -1,4 +1,4 @@
-# psetornot
-Android application developed in App Inventor for 6.S198.
+# psetornah
+Android application developed in App Inventor for 6.S198. Or nah
 ## Collaborators:
-Izzy Gomez, Wei Low, Phillip Graham
+Izzy "izza bitch" Gomez, Wei Low, Phillip Graham
