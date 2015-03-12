@@ -29,10 +29,9 @@
         center: myCenter
         }
       var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-      //setMarkers(map, places);
+      setMarkers(map, places);
       queryTable(map);
-      layer.setMap(map);
-      //map.fitBounds(bounds);
+      map.fitBounds(bounds);
     }
 
   function setMarkers(map, locations){
@@ -55,11 +54,12 @@
   function queryTable(map){
       var layer = new google.maps.FusionTablesLayer({
       query: {
-        select: 'location',
+        select: '\'Geocodable location\'',
         from: '1icaZHY14U93g_Ya9tJQ5I1LUM9_ElfLVufKGvrT8',
-        where: 'shown == true, kerberos == izzyg'
+        where: 'shown == true'
         }
       });
+      layer.setMap(map);
     }
 
   google.maps.event.addDomListener(window, 'load', initialize);
