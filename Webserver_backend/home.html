@@ -4,7 +4,7 @@
   Date Created: 28 Feb 2015
   Last Updated: 1 March 2015
 
-  Description: Google Maps Javascript API Backend for PsetOrNot App
+  Description: Google Maps Javascript API FrontEnd for PsetOrNot App
 -->
 
 <!DOCTYPE html>
@@ -27,7 +27,8 @@
     <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDM8urGiP100_mibDOn1ZwVJid2oPzC1Mc">
     </script>
-
+    IN HTML: <p id = "myinfo"><%= username %></p>
+    IN JAVASCRIPT: var current user = $('#myinfo').text();
     <!-- Google Maps API Reference, including my browser API Key -->
     <script src=askmap.js></script>
   </head>

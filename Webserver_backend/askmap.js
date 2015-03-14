@@ -65,45 +65,31 @@ function queryTable(map){
       query: {
           select: '\'Geocodable location\'',
           from: '1icaZHY14U93g_Ya9tJQ5I1LUM9_ElfLVufKGvrT8',
-          where: 'shown == true'
-
         },
       //available colors: small_yellow, small_red, small_purple, small_green
       //small_blue, measle_turquoise, measle_brown, measle_white,
+
+
       styles: [
-              {
-                where: "time >= 120",
-                markerOptions: {
-                   iconName: 'measle_brown'
-                }
+              {where: 'shown == true' && "'time' >= 120",
+                markerOptions: {iconName: 'measle_brown'}
               },
-             {
-               where: "time < 120" && "time >= 60",
-               markerOptions: {
-                  iconName: 'small_yellow'
-               }
-             },
 
-             {
-               where: "time < 60" && "time >= 30",
-               markerOptions: {
-                  iconName: 'small_purple'
-               }
-             },
-             {
-               where: "time < 30" && "time >= 10",
-               markerOptions: {
-                  iconName: 'measle_turquoise'
-               }
-             },
+              {where: 'shown == true' && "'time' < 120",
+                markerOptions: {iconName: 'small_yellow'}
+              },
 
-             {
-               where: "time <= 10",
-               markerOptions: {
-                  iconName: 'small_green'
-               }
-             },
+              {where: 'shown == true' && "'time' < 60",
+               markerOptions: {iconName: 'small_purple'}
+              },
 
+              {where: 'shown == true' && "'time' < 30",
+               markerOptions: {iconName: 'measle_turquoise'}
+              },
+
+              {where: 'shown == true' && "'time' <= 10",
+               markerOptions: {iconName: 'small_purple'}
+              }
         ]});
         layer.setMap(map);
       }
